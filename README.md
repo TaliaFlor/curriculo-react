@@ -1,1 +1,1 @@
-# Curriículo React
+# Currículo React
