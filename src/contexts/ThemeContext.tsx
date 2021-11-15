@@ -1,16 +1,21 @@
 import React, {createContext, useCallback, useContext, useMemo, useState} from 'react';
 import {DarkTheme as PaperDarkTheme, DefaultTheme as PaperDefaultTheme} from "react-native-paper";
 import {DarkTheme as NavigationDarkTheme, DefaultTheme as NavigationDefaultTheme} from "@react-navigation/native";
+import {useColorScheme} from "react-native";
 
 // ----------- THEME CUSTOMIZATION -----------
 
-const PRIMARY = '#6247aa';
+const PRIMARY = '#ff5d8f';
 const ACCENT = '#00B4D8';
+
+const DEFAULT_THEME_ICON = require('../../assets/images/sun.png');
+const DARK_THEME_ICON = require('../../assets/images/moon.png');
 
 
 const CombinedDefaultTheme = {
     ...PaperDefaultTheme,
     ...NavigationDefaultTheme,
+    icon: DEFAULT_THEME_ICON,
     colors: {
         ...PaperDefaultTheme.colors,
         ...NavigationDefaultTheme.colors,
@@ -22,6 +27,7 @@ const CombinedDefaultTheme = {
 const CombinedDarkTheme = {
     ...PaperDarkTheme,
     ...NavigationDarkTheme,
+    icon: DARK_THEME_ICON,
     colors: {
         ...PaperDarkTheme.colors,
         ...NavigationDarkTheme.colors,
@@ -45,7 +51,9 @@ type Props = {
 }
 
 export const ThemeProvider = (props: Props) => {
-    const [isThemeDark, setIsThemeDark] = useState(false);
+    const colorScheme = useColorScheme();   // dark | light | null
+
+    const [isThemeDark, setIsThemeDark] = useState(colorScheme === 'dark');
 
     const theme = isThemeDark ? CombinedDarkTheme : CombinedDefaultTheme;
 

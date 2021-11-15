@@ -3,6 +3,7 @@ import {Routes} from './src/routes/Routes';
 import {Provider as PaperProvider,} from "react-native-paper";
 import {ThemeProvider, useThemeContext} from "./src/contexts/ThemeContext";
 import {NavigationContainer} from "@react-navigation/native";
+import {Header} from "./src/components/organisms/Header";
 
 
 export default function App() {
@@ -19,6 +20,7 @@ const Main = () => {
     return (
         <PaperProvider theme={theme}>
             <NavigationContainer theme={theme}>
+                <Header/>
                 <Routes/>
             </NavigationContainer>
         </PaperProvider>
