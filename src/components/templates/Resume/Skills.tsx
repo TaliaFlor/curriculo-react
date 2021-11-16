@@ -27,6 +27,8 @@ export const Skills = () => {
                 <Competency icon="language-javascript" value="JavaScript"/>
                 <Competency icon="language-typescript" value="TypeScript"/>
                 <Competency icon="angular" value="Angular"/>
+                <Competency icon="language-html5" value="HTML"/>
+                <Competency icon="language-css3" value="CSS"/>
                 <Competency icon="language-python" value="Python"/>
                 <Competency icon="react" value="React Native"/>
                 <Competency icon="git" value="Git"/>
