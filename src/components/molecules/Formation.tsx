@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react";
 import {StyleSheet} from "react-native";
 import {Caption, Headline, Subheading, Surface, useTheme} from "react-native-paper";
@@ -11,24 +12,16 @@ const styles = StyleSheet.create({
         elevation: 5,
         paddingVertical: '0.75em',
         paddingHorizontal: '1em',
-        // @ts-ignore
         borderRadius: '1em',
     },
     course: {
-        // @ts-ignore
         fontSize: '0.9em',
         fontWeight: "bold",
     },
-    type: {
-        // @ts-ignore
-        fontSize: '0.6em',
-    },
     institute: {
-        // @ts-ignore
         fontSize: '0.75em',
     },
     duration: {
-        // @ts-ignore
         fontSize: '0.6em',
     }
 });

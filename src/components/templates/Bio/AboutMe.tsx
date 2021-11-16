@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
     fullname: {
         fontWeight: "bold",
         marginLeft: '0.5em',
-        // @ts-ignore
         fontSize: '2em'
     }
 });
