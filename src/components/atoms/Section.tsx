@@ -19,13 +19,13 @@ export const styles = StyleSheet.create({
 
 
 type Props = {
-    isFirst?: boolean,
+    first?: boolean,
     style?: any,
     children?: any,
 };
 
 export const Section = (props: Props) => {
-    const marginTop = (props.isFirst ? '' : {marginTop: '1em'});
+    const marginTop = (props.first ? '' : {marginTop: '1em'});
 
     return (
         <Surface style={[styles.container, props.style, marginTop]}>

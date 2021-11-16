@@ -12,7 +12,7 @@ export const Routes = () => {
 
     return (
         <Tab.Navigator
-            initialRouteName="Resume"
+            initialRouteName="Bio"
             backBehavior="history"
             shifting={true}
             activeColor={theme?.colors.primary}

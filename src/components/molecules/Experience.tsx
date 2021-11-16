@@ -13,28 +13,29 @@ const styles = StyleSheet.create({
         paddingVertical: '0.75em',
         paddingHorizontal: '1em',
         borderRadius: '1em',
+        width: '18em',
     },
-    course: {
+    name: {
         fontSize: '0.9em',
         fontWeight: "bold",
     },
-    institute: {
+    organization: {
         fontSize: '0.75em',
     },
     duration: {
-        fontSize: '0.6em',
+        fontSize: '0.63em',
     }
 });
 
 
 type Props = {
     isFirst?: boolean,
-    course: string,
-    institute: string,
+    name: string,
+    organization: string,
     duration: string,
 };
 
-export const Formation = (props: Props) => {
+export const Experience = (props: Props) => {
     const theme = useTheme();
 
     const marginTop = (props.isFirst ? '' : {marginTop: '0.5em'});
@@ -45,8 +46,8 @@ export const Formation = (props: Props) => {
 
     return (
         <Surface style={[styles.container, marginTop]}>
-            <Headline style={[styles.course, courseTheme]}>{props.course}</Headline>
-            <Subheading style={styles.institute}>{props.institute}</Subheading>
+            <Headline style={[styles.name, courseTheme]}>{props.name}</Headline>
+            <Subheading style={styles.organization}>{props.organization}</Subheading>
             <Caption style={styles.duration}>{props.duration}</Caption>
         </Surface>
     );

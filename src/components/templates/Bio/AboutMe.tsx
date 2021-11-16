@@ -24,7 +24,7 @@ export const AboutMe = () => {
     const theme = useTheme();
 
     return (
-        <Section isFirst>
+        <Section first>
             <View style={styles.header}>
                 <Avatar.Image size={150} source={require('../../../../assets/images/photo.jpg')}/>
                 <Title style={[styles.fullname, {color: theme?.colors.primary}]}>Talia Nadegia Flor</Title>

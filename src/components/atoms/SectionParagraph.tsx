@@ -16,10 +16,8 @@ type Props = {
     children?: any,
 };
 
-export const SectionParagraph = (props: Props) => {
-    return (
-        <Paragraph style={[styles.paragraph, props.style]}>
-            {'\t'} {props.children}
-        </Paragraph>
-    );
-}
+export const SectionParagraph = (props: Props) => (
+    <Paragraph style={[styles.paragraph, props.style]}>
+        {'\t'} {props.children}
+    </Paragraph>
+);

@@ -5,7 +5,7 @@ import {IconButton, useTheme} from "react-native-paper";
 
 
 type Props = {
-    isWebsite?: boolean,
+    website?: boolean,
     icon: string,
     href: string,
     style?: any,
@@ -14,7 +14,7 @@ type Props = {
 export const IconLink = (props: Props) => {
     const theme = useTheme();
 
-    const goto = () => props.isWebsite ? WebBrowser.openBrowserAsync(props.href) : Linking.openURL(props.href)
+    const goto = () => props.website ? WebBrowser.openBrowserAsync(props.href) : Linking.openURL(props.href)
 
     return <IconButton
         style={props.style}
