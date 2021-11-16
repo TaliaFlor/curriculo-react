@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react";
 import {Avatar, Title, useTheme} from "react-native-paper";
 import {StyleSheet, View} from "react-native";

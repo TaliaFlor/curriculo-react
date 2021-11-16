@@ -1,21 +1,16 @@
-import {StyleSheet, Text, View} from "react-native";
+import {StyleSheet} from "react-native";
 import React from "react";
-import {useTheme} from "react-native-paper";
+import {Page} from "../components/molecules/Page";
+import {AcademicFormation} from "../components/templates/Resume/AcademicFormation";
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    }
+    container: {}
 });
 
 export const Resume = () => {
-    const theme = useTheme();
-
     return (
-        <View style={styles.container}>
-            <Text style={{color: theme?.colors.text}}>Resume</Text>
-        </View>
+        <Page>
+            <AcademicFormation/>
+        </Page>
     );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import {Section} from "../../atoms/Section";
-import {IconLink} from "../../atoms/IconLink";
+import {IconLink} from "../../molecules/IconLink";
 
 const MARGIN = {marginLeft: '0.75em'};
 

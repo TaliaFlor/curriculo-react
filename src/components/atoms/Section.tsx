@@ -25,8 +25,10 @@ type Props = {
 };
 
 export const Section = (props: Props) => {
+    const marginTop = (props.isFirst ? '' : {marginTop: '1em'});
+
     return (
-        <Surface style={[styles.container, props.style, (props.isFirst ? '' : {marginTop: '1em'})]}>
+        <Surface style={[styles.container, props.style, marginTop]}>
             {props.children}
         </Surface>
     );
