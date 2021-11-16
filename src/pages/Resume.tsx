@@ -15,7 +15,7 @@ export const Resume = () => {
 
     return (
         <View style={styles.container}>
-            <Text style={[{color: theme?.colors.text}]}>Resume</Text>
+            <Text style={{color: theme?.colors.text}}>Resume</Text>
         </View>
     );
 }

@@ -1,21 +1,30 @@
-import {StyleSheet, Text, View} from "react-native";
+import {ScrollView, StyleSheet, View} from "react-native";
 import React from "react";
-import {useTheme} from "react-native-paper";
+import {AboutMe} from "../components/templates/Bio/AboutMe";
+import {Hobbies} from "../components/templates/Bio/Hobbies";
+import {Contact} from "../components/templates/Bio/Contact";
+
+
+const MARGIN = '0.5em';
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
+    flex: {
+        display: "flex",
         alignItems: 'center',
         justifyContent: 'center',
-    }
+    },
 });
 
 export const Bio = () => {
-    const theme = useTheme();
-
     return (
-        <View style={styles.container}>
-            <Text style={[{color: theme?.colors.text}]}>Bio</Text>
-        </View>
+        <ScrollView contentContainerStyle={styles.flex}>
+            <View style={{marginTop: MARGIN}}/>
+
+            <AboutMe/>
+            <Hobbies/>
+            <Contact/>
+
+            <View style={{marginBottom: MARGIN}}/>
+        </ScrollView>
     );
 }
